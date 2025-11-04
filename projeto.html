@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida Verde - Projetos, Voluntariado e Doações</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <i class="fas fa-seedling logo-icon"></i>
+            <span class="logo-text">Vida Verde</span>
+          </a>
+
+          <button class="mobile-menu-btn" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <nav class="nav">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Início</a></li>
+              <li class="dropdown">
+                <a href="projeto.html" class="nav-link dropdown-toggle active">
+                  Projetos <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#nascentes" class="dropdown-link"
+                      >Nascentes Vivas</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#cerrado" class="dropdown-link">Cerrado em Pé</a>
+                  </li>
+                  <li>
+                    <a href="#mata-atlantica" class="dropdown-link"
+                      >Mata Atlântica</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+              <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+              <li><a href="#doar" class="btn btn-secondary btn-sm">Doar</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="nav-overlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Nossos Projetos</h1>
+          <p class="hero-subtitle">
+            Conheça as iniciativas que transformam realidades em Minas Gerais e
+            descubra como você pode fazer parte dessa mudança
+          </p>
+          <div class="hero-actions">
+            <a href="#volunteer" class="btn btn-primary btn-lg">
+              <i class="fas fa-hands-helping"></i>
+              Seja Voluntário
+            </a>
+            <a href="#doar" class="btn btn-outline btn-lg">
+              <i class="fas fa-donate"></i>
+              Fazer Doação
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-grid">
+      <div class="container">
+        <!-- Seção Projetos -->
+        <section id="projects" class="section">
+          <div class="section-title">
+            <h2>Nossos Projetos Sociais</h2>
+            <p>
+              Iniciativas que preservam o meio ambiente e transformam
+              comunidades em Minas Gerais
+            </p>
+          </div>
+
+          <div class="card mb-5">
+            <div class="card-body">
+              <img
+                src="assets/imagens/feche-o-trabalho-em-equipe-voluntario-de-pessoas-colocando-o-dedo-nas-maos-em-forma-de-estrela-juntospilha-de-maosunidade-e-trabalho-em-equipe-no-dia-mundial-meio-ambiente.jpg"
+                alt="Grupo de pessoas com camisas brancas, em posição circular, colocam as mãos se tocando no centro do círculo"
+                style="
+                  width: 100%;
+                  height: 400px;
+                  object-fit: cover;
+                  border-radius: var(--border-radius);
+                  margin-bottom: var(--space-4);
+                "
+              />
+            </div>
+          </div>
+
+          <div class="projects-grid grid grid-md-2 grid-lg-3 gap-4">
+            <!-- Projeto Nascentes Vivas -->
+            <div id="nascentes" class="card project-card">
+              <div class="card-header">
+                <i class="fas fa-water project-icon"></i>
+                <h3>Projeto Nascentes Vivas</h3>
+                <span class="badge badge-primary">Em Andamento</span>
+              </div>
+              <div class="card-body">
+                <p class="project-location">
+                  Serra do Espinhaço - Diamantina e Serra do Cipó
+                </p>
+                <p>
+                  Recuperação e proteção de nascentes na região da Serra do
+                  Espinhaço, garantindo água de qualidade para comunidades
+                  rurais e preservando os cursos d'água que abastecem centenas
+                  de municípios mineiros.
+                </p>
+
+                <h4>Ações Desenvolvidas:</h4>
+                <ul>
+                  <li>Cercamento e proteção de nascentes</li>
+                  <li>Reflorestamento de matas ciliares</li>
+                  <li>Implantação de sistemas de captação de água de chuva</li>
+                  <li>Educação ambiental com comunidades locais</li>
+                  <li>Monitoramento da qualidade da água</li>
+                </ul>
+
+                <h4>Impacto (2023):</h4>
+                <ul class="impact-list">
+                  <li>42 nascentes recuperadas</li>
+                  <li>18 comunidades beneficiadas</li>
+                  <li>210 hectares de APPs protegidas</li>
+                  <li>2.500 pessoas com acesso à água de qualidade</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a href="cadastro.html" class="btn btn-outline btn-sm">
+                  <i class="fas fa-user-plus"></i>
+                  Participar
+                </a>
+              </div>
+            </div>
+
+            <!-- Projeto Cerrado em Pé -->
+            <div id="cerrado" class="card project-card">
+              <div class="card-header">
+                <i class="fas fa-tree project-icon"></i>
+                <h3>Projeto Cerrado em Pé</h3>
+                <span class="badge badge-success">Expandindo</span>
+              </div>
+              <div class="card-body">
+                <p class="project-location">
+                  Norte de Minas - Montes Claros e Januária
+                </p>
+                <p>
+                  Conservação do bioma Cerrado através do fomento a práticas
+                  sustentáveis de produção, combate ao desmatamento e
+                  valorização do conhecimento tradicional das comunidades
+                  geraizeiras.
+                </p>
+
+                <h4>Ações Desenvolvidas:</h4>
+                <ul>
+                  <li>Implantação de sistemas agroflorestais</li>
+                  <li>Capacitação em apicultura sustentável</li>
+                  <li>Coleta e beneficiamento de frutos nativos</li>
+                  <li>Brigada voluntária de prevenção a incêndios</li>
+                  <li>Rotulagem de produtos da sociobiodiversidade</li>
+                </ul>
+
+                <h4>Impacto (2023):</h4>
+                <ul class="impact-list">
+                  <li>120 famílias envolvidas</li>
+                  <li>650 hectares sob manejo sustentável</li>
+                  <li>R$ 280.000 em renda gerada para comunidades</li>
+                  <li>85% de redução em incêndios florestais</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a href="cadastro.html" class="btn btn-outline btn-sm">
+                  <i class="fas fa-user-plus"></i>
+                  Participar
+                </a>
+              </div>
+            </div>
+
+            <!-- Projeto Mata Atlântica Mineira -->
+            <div id="mata-atlantica" class="card project-card">
+              <div class="card-header">
+                <i class="fas fa-mountain project-icon"></i>
+                <h3>Projeto Mata Atlântica Mineira</h3>
+                <span class="badge badge-warning">Necessita Apoio</span>
+              </div>
+              <div class="card-body">
+                <p class="project-location">
+                  Zona da Mata - Juiz de Fora e Muriaé
+                </p>
+                <p>
+                  Restauração de fragmentos florestais da Mata Atlântica e
+                  criação de corredores ecológicos para a fauna, integrando
+                  Unidades de Conservação e propriedades particulares.
+                </p>
+
+                <h4>Ações Desenvolvidas:</h4>
+                <ul>
+                  <li>Produção de mudas nativas em viveiros comunitários</li>
+                  <li>Plantio de espécies ameaçadas de extinção</li>
+                  <li>Criação de corredores ecológicos</li>
+                  <li>Monitoramento da fauna com câmeras trap</li>
+                  <li>Programa de pagamento por serviços ambientais</li>
+                </ul>
+
+                <h4>Impacto (2023):</h4>
+                <ul class="impact-list">
+                  <li>45.000 mudas plantadas</li>
+                  <li>180 hectares em processo de restauração</li>
+                  <li>12 corredores ecológicos implementados</li>
+                  <li>28 espécies de fauna registradas retornando</li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <a href="cadastro.html" class="btn btn-outline btn-sm">
+                  <i class="fas fa-user-plus"></i>
+                  Participar
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção Voluntariado -->
+        <section id="volunteer" class="section">
+          <div class="section-title">
+            <h2>Programa de Voluntariado</h2>
+            <p>Junte-se a nós e faça a diferença pelo meio ambiente mineiro</p>
+          </div>
+
+          <div class="volunteer-options grid grid-md-3 gap-4">
+            <div class="card volunteer-type">
+              <div class="card-body text-center">
+                <i class="fas fa-hands-helping volunteer-icon"></i>
+                <h3>Voluntariado Presencial</h3>
+                <p>
+                  Participação direta nas atividades de campo com imersão nos
+                  projetos.
+                </p>
+                <ul class="text-left">
+                  <li>
+                    <strong>Atuação:</strong> Projetos de reflorestamento e
+                    conservação
+                  </li>
+                  <li>
+                    <strong>Período:</strong> Plantões de 5 dias ou programas de
+                    2 semanas
+                  </li>
+                  <li>
+                    <strong>Requisitos:</strong> Maior de 18 anos e boa condição
+                    física
+                  </li>
+                  <li>
+                    <strong>Inclui:</strong> Alimentação, alojamento e
+                    capacitação
+                  </li>
+                </ul>
+                <a href="cadastro.html" class="btn btn-primary mt-4">
+                  <i class="fas fa-user-plus"></i>
+                  Inscreva-se
+                </a>
+              </div>
+            </div>
+
+            <div class="card volunteer-type">
+              <div class="card-body text-center">
+                <i class="fas fa-user-graduate volunteer-icon"></i>
+                <h3>Voluntariado Especializado</h3>
+                <p>
+                  Para profissionais que desejam contribuir com seus
+                  conhecimentos.
+                </p>
+                <ul class="text-left">
+                  <li>
+                    <strong>Profissionais:</strong> Biólogos, engenheiros,
+                    educadores
+                  </li>
+                  <li>
+                    <strong>Atuação:</strong> Consultoria técnica e capacitações
+                  </li>
+                  <li><strong>Modalidade:</strong> Presencial ou remota</li>
+                  <li>
+                    <strong>Duração:</strong> Projetos com carga horária
+                    definida
+                  </li>
+                </ul>
+                <a href="cadastro.html" class="btn btn-primary mt-4">
+                  <i class="fas fa-user-plus"></i>
+                  Inscreva-se
+                </a>
+              </div>
+            </div>
+
+            <div class="card volunteer-type">
+              <div class="card-body text-center">
+                <i class="fas fa-users volunteer-icon"></i>
+                <h3>Voluntariado Local</h3>
+                <p>Para moradores das regiões onde atuamos.</p>
+                <ul class="text-left">
+                  <li>
+                    <strong>Comunidades:</strong> Moradores das regiões de
+                    atuação
+                  </li>
+                  <li>
+                    <strong>Atividades:</strong> Viveiros comunitários e brigada
+                    de incêndio
+                  </li>
+                  <li>
+                    <strong>Benefícios:</strong> Capacitação e certificação
+                  </li>
+                  <li>
+                    <strong>Apoio:</strong> Projetos produtivos sustentáveis
+                  </li>
+                </ul>
+                <a href="cadastro.html" class="btn btn-primary mt-4">
+                  <i class="fas fa-user-plus"></i>
+                  Inscreva-se
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <h3 class="text-center mb-4">Processo de Seleção</h3>
+              <div class="process-steps">
+                <div class="step">
+                  <span>1</span>
+                  <div class="step-label">Cadastro</div>
+                </div>
+                <div class="step">
+                  <span>2</span>
+                  <div class="step-label">Entrevista</div>
+                </div>
+                <div class="step">
+                  <span>3</span>
+                  <div class="step-label">Capacitação</div>
+                </div>
+                <div class="step">
+                  <span>4</span>
+                  <div class="step-label">Alocação</div>
+                </div>
+                <div class="step">
+                  <span>5</span>
+                  <div class="step-label">Acompanhamento</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção Doações -->
+        <section id="doar" class="section">
+          <div class="section-title">
+            <h2>Contribua com Nossas Ações</h2>
+            <p>Suporte nossos projetos e faça parte dessa transformação!</p>
+          </div>
+
+          <div class="donation-methods grid grid-md-3 gap-4">
+            <div class="card donation-card">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt donation-icon"></i>
+                <h3>PIX</h3>
+                <div class="donation-info">
+                  <p><strong>Chave:</strong> doe@vidaverde.org.br</p>
+                  <p><strong>Nome:</strong> Associação Vida Verde Ambiental</p>
+                  <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+                </div>
+                <button class="btn btn-primary mt-3" onclick="copiarPix()">
+                  <i class="fas fa-copy"></i>
+                  Copiar Chave PIX
+                </button>
+              </div>
+            </div>
+
+            <div class="card donation-card">
+              <div class="card-body text-center">
+                <i class="fas fa-university donation-icon"></i>
+                <h3>Transferência Bancária</h3>
+                <div class="donation-info">
+                  <p><strong>Banco:</strong> Banco do Brasil (001)</p>
+                  <p><strong>Agência:</strong> 1234-5</p>
+                  <p><strong>Conta:</strong> 12.345-6</p>
+                  <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card donation-card">
+              <div class="card-body text-center">
+                <i class="fas fa-credit-card donation-icon"></i>
+                <h3>Cartão de Crédito</h3>
+                <div class="donation-info">
+                  <p>Doações únicas ou mensais</p>
+                  <p>Parcelamento em até 12x</p>
+                  <p>100% seguro e rastreável</p>
+                </div>
+                <button
+                  class="btn btn-primary mt-3"
+                  onclick="abrirModalDoacao()"
+                >
+                  <i class="fas fa-donate"></i>
+                  Doar Agora
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Informações de Transparência -->
+          <div class="transparency-info card mt-5">
+            <div class="card-body">
+              <h3 class="text-center mb-4">
+                <i class="fas fa-chart-pie"></i>
+                Transparência na Aplicação de Recursos
+              </h3>
+
+              <div class="stats-grid grid grid-md-4 gap-3">
+                <div class="stat text-center">
+                  <span class="stat-number">83%</span>
+                  <span class="stat-label">Aplicação direta em projetos</span>
+                </div>
+                <div class="stat text-center">
+                  <span class="stat-number">9%</span>
+                  <span class="stat-label">Custos administrativos</span>
+                </div>
+                <div class="stat text-center">
+                  <span class="stat-number">8%</span>
+                  <span class="stat-label">Captação de recursos</span>
+                </div>
+                <div class="stat text-center">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Transparência</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Modal de Doação -->
+    <div id="modalDoacao" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Doação via Cartão de Crédito</h3>
+          <button class="modal-close" onclick="fecharModalDoacao()">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formDoacao">
+            <div class="form-group">
+              <label for="valor" class="form-label">Valor da Doação (R$)</label>
+              <input
+                type="number"
+                id="valor"
+                class="form-control"
+                min="10"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="parcelas" class="form-label"
+                >Número de Parcelas</label
+              >
+              <select id="parcelas" class="form-control" required>
+                <option value="1">1x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+                <option value="6">6x</option>
+                <option value="12">12x</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipo de Doação</label>
+              <div class="form-options">
+                <label class="checkbox-group">
+                  <input type="radio" name="tipo" value="unica" checked />
+                  <span>Doação Única</span>
+                </label>
+                <label class="checkbox-group">
+                  <input type="radio" name="tipo" value="mensal" />
+                  <span>Doação Mensal</span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100">
+              <i class="fas fa-lock"></i>
+              Realizar Doação
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid grid grid-md-4 gap-4">
+          <div class="footer-column">
+            <h3>Vida Verde</h3>
+            <p>Preservando o patrimônio natural de Minas Gerais desde 2005.</p>
+          </div>
+            <h3>Links Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Página Inicial</a></li>
+              <li><a href="projeto.html">Projetos Sociais</a></li>
+              <li><a href="cadastro.html">Cadastro</a></li>
+              <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Projetos</h3>
+            <ul class="footer-links">
+              <li><a href="#nascentes">Nascentes Vivas</a></li>
+              <li><a href="#cerrado">Cerrado em Pé</a></li>
+              <li><a href="#mata-atlantica">Mata Atlântica</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Transparência</h3>
+            <ul class="footer-links">
+              <li><a href="#">Relatórios Anuais</a></li>
+              <li><a href="#">Prestação de Contas</a></li>
+              <li><a href="#">Certificações</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom text-center">
+          <p>&copy; 2024 Vida Verde - Todos os direitos reservados</p>
+          <p>Desenvolvido por Fábio Lopes de Andrade</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      // Funções específicas para a página de projetos
+      function copiarPix() {
+        const pixKey = "doe@vidaverde.org.br";
+        navigator.clipboard.writeText(pixKey).then(() => {
+          showToast(
+            "Chave PIX copiada para a área de transferência!",
+            "success"
+          );
+        });
+      }
+
+      function abrirModalDoacao() {
+        document.getElementById("modalDoacao").classList.add("show");
+      }
+
+      function fecharModalDoacao() {
+        document.getElementById("modalDoacao").classList.remove("show");
+      }
+
+      // Validação do formulário de doação
+      document
+        .getElementById("formDoacao")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const valor = document.getElementById("valor").value;
+          if (valor >= 10) {
+            showToast(
+              `Doação de R$ ${valor} processada com sucesso! Obrigado pelo apoio.`,
+              "success"
+            );
+            fecharModalDoacao();
+            this.reset();
+          } else {
+            showToast("O valor mínimo para doação é R$ 10,00.", "error");
+          }
+        });
+
+      // Fechar modal ao clicar fora
+      document
+        .getElementById("modalDoacao")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            fecharModalDoacao();
+          }
+        });
+    </script>
+  </body>
+</html>

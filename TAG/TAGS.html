@@ -1,0 +1,170 @@
+# Guia Rápido: Principais Tags HTML
+
+Este arquivo serve como uma referência rápida para as tags HTML mais comuns e essenciais, organizadas por categoria.
+
+## 1. Estrutura Básica do Documento
+
+Todo arquivo HTML precisa desta estrutura fundamental.
+
+- `<!DOCTYPE html>`: Declaração que define o documento como HTML5. Deve ser a primeira linha.
+- `<html>`: A tag raiz que envolve todo o conteúdo da página.
+- `<head>`: Contém metadados sobre a página (informações que não são exibidas diretamente), como o título, links para CSS e scripts.
+- `<body>`: Contém todo o conteúdo visível da página (textos, imagens, vídeos, etc.).
+
+**Exemplo:**
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da Página</title>
+</head>
+<body>
+    </body>
+</html>
+```
+
+---
+
+## 2. Tags de Texto
+
+Usadas para estruturar e formatar o conteúdo textual.
+
+- `<h1>` a `<h6>`: Títulos (Headings). `<h1>` é o mais importante e `<h6>` o menos importante.
+- `<p>`: Parágrafo.
+- `<a>`: Âncora. Cria um link para outra página ou recurso. O atributo `href` é obrigatório.
+- `<strong>`: Define um texto com forte importância (geralmente exibido em **negrito**).
+- `<em>`: Define um texto com ênfase (geralmente exibido em *itálico*).
+- `<br>`: Quebra de linha (self-closing).
+- `<span>`: Um container genérico para estilizar uma pequena parte do texto com CSS, sem quebrar a linha.
+
+**Exemplo:**
+```html
+<h1>Título Principal</h1>
+<p>Este é um parágrafo com um <a href="[https://www.exemplo.com](https://www.exemplo.com)">link</a>. Use <strong>esta tag</strong> para dar importância.</p>
+```
+
+---
+
+## 3. Estrutura Semântica (Layout)
+
+Tags que dão significado à estrutura da sua página, ajudando no SEO e na acessibilidade.
+
+- `<header>`: Cabeçalho da página ou de uma seção. Geralmente contém o logo e o menu.
+- `<nav>`: Define uma seção de links de navegação.
+- `<main>`: Define o conteúdo principal e único da página. Deve haver apenas um por página.
+- `<section>`: Define uma seção temática do conteúdo (um "capítulo").
+- `<article>`: Define um conteúdo independente e autocontido (um post de blog, uma notícia).
+- `<aside>`: Define um conteúdo secundário, como uma barra lateral (sidebar).
+- `<footer>`: Rodapé da página ou de uma seção.
+
+**Exemplo de Layout:**
+```html
+<body>
+    <header>...</header>
+    <nav>...</nav>
+    <main>
+        <section>
+            <article>...</article>
+        </section>
+        <aside>...</aside>
+    </main>
+    <footer>...</footer>
+</body>
+```
+
+---
+
+## 4. Listas
+
+Usadas para agrupar itens.
+
+- `<ul>`: Lista não ordenada (Unordered List) - usa marcadores (bolinhas).
+- `<ol>`: Lista ordenada (Ordered List) - usa números.
+- `<li>`: Item da lista (List Item). Usado dentro de `<ul>` ou `<ol>`.
+
+**Exemplo:**
+```html
+<ul>
+    <li>Café</li>
+    <li>Chá</li>
+</ul>
+
+<ol>
+    <li>Primeiro passo</li>
+    <li>Segundo passo</li>
+</ol>
+```
+
+---
+
+## 5. Mídia e Conteúdo Embutido
+
+Para adicionar imagens, vídeos e outros tipos de mídia.
+
+- `<img>`: Insere uma imagem. É uma tag self-closing. Requer os atributos `src` (fonte da imagem) e `alt` (texto alternativo).
+- `<video>`: Insere um vídeo.
+- `<audio>`: Insere um áudio.
+
+**Exemplo:**
+```html
+<img src="caminho/para/imagem.jpg" alt="Descrição da imagem">
+```
+
+---
+
+## 6. Formulários
+
+Para coletar dados do usuário.
+
+- `<form>`: A tag que envolve todos os campos de um formulário.
+- `<input>`: O campo de entrada de dados mais versátil. O atributo `type` define seu comportamento (`text`, `email`, `password`, `checkbox`, `radio`, `submit`, etc.).
+- `<label>`: A etiqueta descritiva para um campo `<input>`.
+- `<textarea>`: Um campo para entrada de texto com múltiplas linhas.
+- `<button>`: Um botão clicável. Use `type="submit"` para enviar o formulário.
+
+**Exemplo:**
+```html
+<form action="#" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="usuario_nome">
+    <button type="submit">Enviar</button>
+</form>
+```
+
+---
+
+## 7. Tabelas
+
+Para exibir dados em formato de grade.
+
+- `<table>`: A tag que envolve toda a tabela.
+- `<thead>`: Define o cabeçalho da tabela.
+- `<tbody>`: Define o corpo da tabela.
+- `<tr>`: Define uma linha da tabela (Table Row).
+- `<th>`: Define uma célula de cabeçalho (Table Header).
+- `<td>`: Define uma célula de dados (Table Data).
+
+**Exemplo:**
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Maria</td>
+      <td>30</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+---
+
+## 8. Outras Tags Úteis
+
+- `<div>`: Divisão. Um container genérico sem significado semântico, usado principalmente para agrupar elementos para estilização com CSS.
