@@ -1,0 +1,23 @@
+{
+  "name": "vida-verde-website",
+  "version": "1.0.0",
+  "description": "Website acessível da ONG Vida Verde",
+  "scripts": {
+    "build": "npm run minify && npm run compress-images",
+    "minify:css": "cleancss -O2 assets/css/*.css -o dist/css/styles.min.css",
+    "minify:js": "uglifyjs assets/js/*.js -o dist/js/scripts.min.js -c -m",
+    "minify:html": "html-minifier --input-dir . --output-dir dist --file-ext html --remove-comments --collapse-whitespace",
+    "minify": "npm run minify:css && npm run minify:js && npm run minify:html",
+    "compress-images": "imagemin assets/img/* --out-dir=dist/img/optimized",
+    "test:a11y": "pa11y http://localhost:3000 --standard=WCAG2AA",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.1",
+    "uglify-js": "^3.17.4",
+    "html-minifier": "^4.0.0",
+    "imagemin-cli": "^7.0.0",
+    "gh-pages": "^4.0.0",
+    "pa11y": "^6.2.3"
+  }
+}
