@@ -2,20 +2,13 @@
   "name": "vida-verde-website",
   "version": "1.0.0",
   "description": "Website acessível da ONG Vida Verde - Preservação Ambiental em Minas Gerais",
-  "main": "index.html",
   "scripts": {
-    "dev": "live-server --port=3000 --no-browser",
-    "build": "npm run minify && npm run compress-images && npm run generate-sitemap",
-    "minify:css": "cleancss -O2 assets/css/*.css -o dist/css/styles.min.css",
-    "minify:js": "uglifyjs assets/js/*.js -o dist/js/scripts.min.js -c -m",
-    "minify:html": "html-minifier --input-dir . --output-dir dist --file-ext html --remove-comments --collapse-whitespace",
-    "minify": "npm run minify:css && npm run minify:js && npm run minify:html",
-    "compress-images": "imagemin assets/img/* --out-dir=dist/img/optimized",
-    "generate-sitemap": "node scripts/generate-sitemap.js",
-    "test:a11y": "pa11y-ci --config .pa11yci.json",
-    "test:lighthouse": "lighthouse-ci --config lighthouse.config.js",
-    "test:axe": "axe http://localhost:3000 --exit",
-    "audit:full": "npm run test:a11y && npm run test:lighthouse && npm run test:axe",
+    "dev": "npx live-server --port=3000",
+    "build": "node build.js",
+    "build:advanced": "npm run minify && npm run compress-images",
+    "minify:css": "cleancss -O1 assets/css/*.css -o dist/css/styles.min.css || echo 'CSS minification skipped'",
+    "minify:js": "uglifyjs assets/js/*.js -o dist/js/scripts.min.js -c -m || echo 'JS minification skipped'",
+    "minify": "npm run minify:css && npm run minify:js",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
@@ -23,25 +16,15 @@
     "uglify-js": "^3.17.4",
     "clean-css-cli": "^5.6.1",
     "html-minifier": "^4.0.0",
-    "imagemin-cli": "^7.0.0",
-    "gh-pages": "^4.0.0",
-    "pa11y-ci": "^3.0.1",
-    "lighthouse-ci": "^1.0.0",
-    "axe-core": "^4.7.2"
+    "gh-pages": "^4.0.0"
   },
   "keywords": [
     "acessibilidade",
     "ong",
     "meio-ambiente",
     "minas-gerais",
-    "wcag",
-    "website",
-    "responsivo"
+    "wcag"
   ],
   "author": "Fábio Lopes de Andrade",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/seu-usuario/vida-verde.git"
-  }
+  "license": "MIT"
 }

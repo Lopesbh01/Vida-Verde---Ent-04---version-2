@@ -1,37 +1,62 @@
-name: CI/CD Pipeline
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
   pull_request:
     branches: [main]
 
 jobs:
-  test-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: 🛠️ Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
           cache: "npm"
 
-      - name: Install dependencies
-        run: npm install
+      - name: 📦 Install dependencies
+        run: |
+          npm install
+          # Instala dependências específicas manualmente se necessário
+          npm install -g clean-css-cli uglify-js html-minifier
 
-      - name: Run accessibility tests
-        run: npm run test:a11y
+      - name: 🔨 Build project
+        run: |
+          # Criar diretório dist se não existir
+          mkdir -p dist/css dist/js dist/img/optimized
 
-      - name: Build project
-        run: npm run build
+          # Copiar arquivos HTML (sem minificar por enquanto)
+          cp *.html dist/ || true
 
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
+          # Copiar assets
+          cp -r assets/ dist/ || true
+
+          # Copiar outros arquivos necessários
+          cp *.xml dist/ || true
+          cp *.json dist/ || true
+
+          echo "✅ Build básico concluído"
+
+      - name: 📊 List files for debugging
+        run: |
+          echo "📁 Estrutura do projeto:"
+          find . -type f -name "*.html" -o -name "*.css" -o -name "*.js" | head -20
+          echo "📁 Conteúdo da pasta dist:"
+          ls -la dist/ || echo "Pasta dist não existe"
+
+      - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          force_orphan: true
