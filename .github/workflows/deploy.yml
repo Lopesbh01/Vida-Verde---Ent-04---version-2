@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -23,7 +23,24 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: "."
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+EOF
+
+# 4. Remover workflow problemático antigo (se existir)
+rm -f .github/workflows/ci-cd.yml 2>/dev/null || true
+
+# 5. Verificar o que foi criado
+echo "📁 Workflows criados:"
+ls -la .github/workflows/
+
+# 6. Fazer commit das correções
+git add .
+git commit -m "fix: :wheelchair: corrige workflow de acessibilidade
+
+- Simplifica a11y-audit para evitar falhas
+- Separa deploy de auditoria de acessibilidade
+- Implementa verificações básicas que funcionam
+- Adiciona checklist manual para validação"

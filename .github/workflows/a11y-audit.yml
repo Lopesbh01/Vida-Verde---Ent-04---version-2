@@ -3,7 +3,7 @@ name: Accessibility Audit
 on:
   pull_request:
     branches: [main, develop]
-  workflow_dispatch: # Permite execução manual
+  workflow_dispatch:
 
 jobs:
   a11y-scan:
@@ -26,11 +26,9 @@ jobs:
       - name: 🔍 Run Basic HTML Validation
         run: |
           echo "🔍 Validando estrutura HTML básica..."
-          # Verifica se arquivos HTML existem
           for file in *.html; do
             if [ -f "$file" ]; then
               echo "✅ $file encontrado"
-              # Verifica tags básicas
               if grep -q "<html" "$file" && grep -q "<body" "$file"; then
                 echo "✅ $file - Estrutura HTML válida"
               else
