@@ -6,6 +6,10 @@
   --background-color: #121212;
   --surface-color: #1e1e1e;
   --error-color: #cf6679;
+  --on-primary: #000000;
+  --on-secondary: #000000;
+  --on-background: #ffffff;
+  --on-surface: #ffffff;
 }
 
 [data-theme="dark"] body {
@@ -16,6 +20,12 @@
 [data-theme="dark"] .card {
   background-color: var(--surface-color);
   border-color: #333;
+  color: var(--on-surface);
+}
+
+[data-theme="dark"] .header {
+  background-color: var(--surface-color);
+  border-bottom-color: #333;
 }
 
 [data-theme="dark"] .btn-outline {
@@ -26,4 +36,23 @@
 [data-theme="dark"] .btn-outline:hover {
   background-color: var(--primary-color);
   color: var(--on-primary);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--on-surface);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link:focus {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .form-control {
+  background-color: var(--surface-color);
+  border-color: #444;
+  color: var(--on-surface);
+}
+
+[data-theme="dark"] .form-control:focus {
+  border-color: var(--primary-color);
 }
