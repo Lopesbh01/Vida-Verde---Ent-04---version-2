@@ -1,0 +1,19 @@
+{
+  "defaults": {
+    "timeout": 30000,
+    "wait": 3000,
+    "ignore": [
+      "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2"
+    ],
+    "hideElements": ".sr-only, .theme-switcher",
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-dev-shm-usage"]
+    }
+  },
+  "urls": [
+    "http://localhost:8080/",
+    "http://localhost:8080/projeto.html",
+    "http://localhost:8080/cadastro.html"
+  ]
+}
