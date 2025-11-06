@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -8,62 +8,77 @@
     <link rel="stylesheet" href="assets/css/layout.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
-<body>
-<!-- Header -->
-    <header class="header">    
-    <!-- Imagem do Cabeçalho -->
-<div class="header-image">
-  <img 
-    src="assets/imagens/original/02.png"
-    alt="uma mão humana, de cor branca, desenhada repousando sobre sete folhas, tudo contido em um círculo de bordas verdes. Ao lado, texto em verde onde se lê Vida Verde" 
-    class="header-img"
-  />
-    <div class="header-image-overlay"></div>
-  </div>
-  
-   <div class="container">
-    <div class="header-content">
-      <a href="index.html" class="logo">
-        <i class="fas fa-seedling logo-icon"></i>
-        <span class="logo-text">Vida Verde</span>
-      </a>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Imagem do Cabeçalho -->
+      <div class="header-image">
+        <img
+          src="assets/imagens/original/02.png"
+          alt="uma mão humana, de cor branca, desenhada repousando sobre sete folhas, tudo contido em um círculo de bordas verdes. Ao lado, texto em verde onde se lê Vida Verde"
+          class="header-img"
+        />
+        <div class="header-image-overlay"></div>
+      </div>
 
-      <button class="mobile-menu-btn" aria-label="Abrir menu" id="mobileMenuBtn">
-        <i class="fas fa-bars"></i>
-      </button>
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <i class="fas fa-seedling logo-icon"></i>
+            <span class="logo-text">Vida Verde</span>
+          </a>
 
-      <nav class="nav" id="mainNav">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link active">Início</a></li>
-          <li class="dropdown">
-            <a href="projeto.html" class="nav-link dropdown-toggle">
-              Projetos <i class="fas fa-chevron-down"></i>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="projeto.html#nascentes" class="dropdown-link">Nascentes Vivas</a>
+          <button
+            class="mobile-menu-btn"
+            aria-label="Abrir menu"
+            id="mobileMenuBtn"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <nav class="nav" id="mainNav">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link active">Início</a></li>
+              <li class="dropdown">
+                <a href="projeto.html" class="nav-link dropdown-toggle">
+                  Projetos <i class="fas fa-chevron-down dropdown-icon"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="projeto.html#nascentes" class="dropdown-link"
+                      >Nascentes Vivas</a
+                    >
+                  </li>
+                  <li>
+                    <a href="projeto.html#cerrado" class="dropdown-link"
+                      >Cerrado em Pé</a
+                    >
+                  </li>
+                  <li>
+                    <a href="projeto.html#mata-atlantica" class="dropdown-link"
+                      >Mata Atlântica</a
+                    >
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a href="projeto.html#cerrado" class="dropdown-link">Cerrado em Pé</a>
-              </li>
-              <li>
-                <a href="projeto.html#mata-atlantica" class="dropdown-link">Mata Atlântica</a>
+              <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+              <li><a href="#contato" class="nav-link">Contato</a></li>
+              <li class="nav-donate">
+                <a href="projeto.html#doar" class="btn btn-secondary btn-sm"
+                  >Doar</a
+                >
               </li>
             </ul>
-          </li>
-          <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
-          <li class="nav-donate">
-            <a href="projeto.html#doar" class="btn btn-secondary btn-sm">Doar</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="nav-overlay" id="navOverlay"></div>
-</header>
+          </nav>
+        </div>
+      </div>
+      <div class="nav-overlay" id="navOverlay"></div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -214,7 +229,9 @@
           </div>
         </section>
 
-         <div class="card mb-5">
+        <!-- Imagem do Grupo -->
+        <section class="section">
+          <div class="card mb-5">
             <div class="card-body">
               <img
                 src="assets/imagens/optimized/01 otm.jpg"
@@ -226,6 +243,10 @@
                   border-radius: var(--border-radius);
                   margin-bottom: var(--space-4);
                 "
+              />
+            </div>
+          </div>
+        </section>
 
         <!-- Transparência -->
         <section class="section">
@@ -305,6 +326,8 @@
             </div>
           </div>
         </section>
+      </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -332,7 +355,7 @@
               <li><a href="projeto.html#mata-atlantica">Mata Atlântica</a></li>
             </ul>
           </div>
-          
+        </div>
 
         <div class="footer-bottom">
           <p>&copy; 2024 Vida Verde - Todos os direitos reservados</p>
@@ -344,10 +367,3 @@
     <script src="js/script.js"></script>
   </body>
 </html>
-"<!-- Teste deploy -->" 
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
