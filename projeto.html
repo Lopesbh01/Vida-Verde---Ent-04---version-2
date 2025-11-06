@@ -520,43 +520,35 @@
       </div>
     </div>
     
-    <!-- Footer -->
+        <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-grid grid grid-md-4 gap-4">
+        <div class="footer-grid">
           <div class="footer-column">
             <h3>Vida Verde</h3>
             <p>Preservando o patrimônio natural de Minas Gerais desde 2005.</p>
           </div>
+          <div class="footer-column">
             <h3>Links Rápidos</h3>
             <ul class="footer-links">
               <li><a href="index.html">Página Inicial</a></li>
               <li><a href="projeto.html">Projetos Sociais</a></li>
               <li><a href="cadastro.html">Cadastro</a></li>
-              <li><a href="index.html#contato">Contato</a></li>
+              <li><a href="#contato">Contato</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
             <h3>Projetos</h3>
             <ul class="footer-links">
-              <li><a href="#nascentes">Nascentes Vivas</a></li>
-              <li><a href="#cerrado">Cerrado em Pé</a></li>
-              <li><a href="#mata-atlantica">Mata Atlântica</a></li>
+              <li><a href="projeto.html#nascentes">Nascentes Vivas</a></li>
+              <li><a href="projeto.html#cerrado">Cerrado em Pé</a></li>
+              <li><a href="projeto.html#mata-atlantica">Mata Atlântica</a></li>
             </ul>
           </div>
+          
 
-          <div class="footer-column">
-            <h3>Transparência</h3>
-            <ul class="footer-links">
-              <li><a href="#">Relatórios Anuais</a></li>
-              <li><a href="#">Prestação de Contas</a></li>
-              <li><a href="#">Certificações</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-bottom text-center">
+        <div class="footer-bottom">
           <p>&copy; 2024 Vida Verde - Todos os direitos reservados</p>
           <p>Desenvolvido por Fábio Lopes de Andrade</p>
         </div>
@@ -564,52 +556,13 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script>
-      // Funções específicas para a página de projetos
-      function copiarPix() {
-        const pixKey = "doe@vidaverde.org.br";
-        navigator.clipboard.writeText(pixKey).then(() => {
-          showToast(
-            "Chave PIX copiada para a área de transferência!",
-            "success"
-          );
-        });
-      }
-
-      function abrirModalDoacao() {
-        document.getElementById("modalDoacao").classList.add("show");
-      }
-
-      function fecharModalDoacao() {
-        document.getElementById("modalDoacao").classList.remove("show");
-      }
-
-      // Validação do formulário de doação
-      document
-        .getElementById("formDoacao")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const valor = document.getElementById("valor").value;
-          if (valor >= 10) {
-            showToast(
-              `Doação de R$ ${valor} processada com sucesso! Obrigado pelo apoio.`,
-              "success"
-            );
-            fecharModalDoacao();
-            this.reset();
-          } else {
-            showToast("O valor mínimo para doação é R$ 10,00.", "error");
-          }
-        });
-
-      // Fechar modal ao clicar fora
-      document
-        .getElementById("modalDoacao")
-        .addEventListener("click", function (e) {
-          if (e.target === this) {
-            fecharModalDoacao();
-          }
-        });
-    </script>
   </body>
 </html>
+"<!-- Teste deploy -->" 
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
