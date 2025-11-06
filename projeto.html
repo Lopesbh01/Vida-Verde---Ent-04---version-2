@@ -23,18 +23,18 @@
     <div class="header-image-overlay"></div>
   </div>
   
-  <div class="container">
+   <div class="container">
     <div class="header-content">
       <a href="index.html" class="logo">
         <i class="fas fa-seedling logo-icon"></i>
         <span class="logo-text">Vida Verde</span>
       </a>
 
-      <button class="mobile-menu-btn" aria-label="Abrir menu">
+      <button class="mobile-menu-btn" aria-label="Abrir menu" id="mobileMenuBtn">
         <i class="fas fa-bars"></i>
       </button>
 
-      <nav class="nav">
+      <nav class="nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link active">Início</a></li>
           <li class="dropdown">
@@ -43,34 +43,26 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a href="projeto.html#nascentes" class="dropdown-link"
-                  >Nascentes Vivas</a
-                >
+                <a href="projeto.html#nascentes" class="dropdown-link">Nascentes Vivas</a>
               </li>
               <li>
-                <a href="projeto.html#cerrado" class="dropdown-link"
-                  >Cerrado em Pé</a
-                >
+                <a href="projeto.html#cerrado" class="dropdown-link">Cerrado em Pé</a>
               </li>
               <li>
-                <a href="projeto.html#mata-atlantica" class="dropdown-link"
-                  >Mata Atlântica</a
-                >
+                <a href="projeto.html#mata-atlantica" class="dropdown-link">Mata Atlântica</a>
               </li>
             </ul>
           </li>
           <li><a href="cadastro.html" class="nav-link">Cadastro</a></li>
           <li><a href="#contato" class="nav-link">Contato</a></li>
-          <li>
-            <a href="projeto.html#doar" class="btn btn-secondary btn-sm"
-              >Doar</a
-            >
+          <li class="nav-donate">
+            <a href="projeto.html#doar" class="btn btn-secondary btn-sm">Doar</a>
           </li>
         </ul>
       </nav>
     </div>
   </div>
-  <div class="nav-overlay"></div>
+  <div class="nav-overlay" id="navOverlay"></div>
 </header>
 
     <!-- Hero Section -->
