@@ -18,21 +18,21 @@
   --secondary-200: #ffcc80;
   --secondary-300: #ffb74d;
   --secondary-400: #ffa726;
-  --secondary-500: #ff9800;
-  --secondary-600: #fb8c00;
+  --secondary-500: #ff9800; /* Laranja de ação */
+  --secondary-600: #e68900; /* Laranja hover */
   --secondary-700: #f57c00;
   --secondary-800: #ef6c00;
   --secondary-900: #e65100;
 
   /* Cores Neutras */
-  --neutral-50: #fafafa;
+  --neutral-50: #f9fafb; /* Fundo claro - CORRIGIDO */
   --neutral-100: #f5f5f5;
-  --neutral-200: #eeeeee;
+  --neutral-200: #e5e7eb; /* Bordas */
   --neutral-300: #e0e0e0;
   --neutral-400: #bdbdbd;
-  --neutral-500: #9e9e9e;
+  --neutral-500: #6b7280; /* Texto secundário */
   --neutral-600: #757575;
-  --neutral-700: #616161;
+  --neutral-700: #374151; /* Texto primário */
   --neutral-800: #424242;
   --neutral-900: #212121;
 
@@ -45,6 +45,7 @@
   --space-6: 64px;
 
   /* Tipografia */
+  --font-family: "Segoe UI", system-ui, sans-serif;
   --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.875rem; /* 14px */
   --font-size-base: 1rem; /* 16px */
